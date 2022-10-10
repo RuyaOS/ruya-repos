@@ -73,7 +73,7 @@ install -m 644 releasever %{buildroot}/etc/dnf/vars
 /etc/dnf/vars/releasever
 
 %changelog
-* Sun Oct 2 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.2-1
+* Mon Oct 10 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.2-1
 - Fedora version number
 
 * Sun Oct 2 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.1-1

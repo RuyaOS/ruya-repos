@@ -1,7 +1,7 @@
-%global fedora_compat 36
+%global fedora_compat %{?fedora}
 
 Name: ruya-repo
-Version: 0.1
+Version: 0.2
 Release: 1%{?dist}
 Summary: Ruya Software Repos
 Summary(ar): مستودعات رؤية البرمجية
@@ -73,6 +73,9 @@ install -m 644 releasever %{buildroot}/etc/dnf/vars
 /etc/dnf/vars/releasever
 
 %changelog
+* Sun Oct 2 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.2-1
+- Fedora version number
+
 * Sun Oct 2 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.1-1
 - Initial.
 

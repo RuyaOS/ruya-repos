@@ -1,7 +1,7 @@
 %global fedora_compat %{?fedora}
 
 Name: ruya-repo
-Version: 0.2
+Version: 0.3
 Release: 1%{?dist}
 Summary: Ruya Software Repos
 Summary(ar): مستودعات رؤية البرمجية
@@ -66,6 +66,14 @@ install -m 644 ruya.repo %{buildroot}/etc/yum.repos.d
 install -d -m 755 %{buildroot}/etc/dnf/vars
 install -m 644 releasever %{buildroot}/etc/dnf/vars
 
+%post -n ruya-dnf
+echo "$(cat /etc/dnf/dnf.conf)
+
+## Add by ruya-dnf package
+fastestmirror=true
+deltarpm=true
+max_parallel_downloads=11" > /etc/dnf/dnf.conf
+
 %files
 %config(noreplace) /etc/yum.repos.d/ruya.repo
 
@@ -73,6 +81,9 @@ install -m 644 releasever %{buildroot}/etc/dnf/vars
 /etc/dnf/vars/releasever
 
 %changelog
+* Mon Oct 24 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.3-1
+- Add dnf custom configurations
+
 * Mon Oct 10 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.2-1
 - Fedora version number
 

@@ -30,7 +30,7 @@ Ruya dnf customizations.
 
 %prep
 echo '[ruya]
-name=Ruya Softwares %{version}
+name=Ruya Software %{version}
 baseurl=https://download.copr.fedorainfracloud.org/results/moceap/RUYA/fedora-$releasever-$basearch/
 type=rpm-md
 skip_if_unavailable=True
@@ -41,7 +41,7 @@ enabled=1
 enabled_metadata=1
 
 [ruya:ml]
-name=Ruya Softwares %{version} - Multilib
+name=Ruya Software %{version} - Multilib
 baseurl=https://download.copr.fedorainfracloud.org/results/moceap/RUYA/fedora-$releasever-i386/
 type=rpm-md
 skip_if_unavailable=True

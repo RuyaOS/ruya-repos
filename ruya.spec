@@ -1,8 +1,8 @@
 %global fedora_compat %{?fedora}
 
 Name: ruya-repo
-Version: 0.3
-Release: 1%{?dist}
+Version: 0.1
+Release: 4%{?dist}
 Summary: Ruya Software Repos
 Summary(ar): مستودعات رؤية البرمجية
 License: GPLv3
@@ -81,10 +81,13 @@ max_parallel_downloads=11" > /etc/dnf/dnf.conf
 /etc/dnf/vars/releasever
 
 %changelog
-* Mon Oct 24 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.3-1
+* Tue Nov 1 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.1-4
+- Fixes
+
+* Mon Oct 24 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.1-3
 - Add dnf custom configurations
 
-* Mon Oct 10 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.2-1
+* Mon Oct 10 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.1-2
 - Fedora version number
 
 * Sun Oct 2 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.1-1

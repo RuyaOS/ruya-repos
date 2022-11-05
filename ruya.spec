@@ -2,7 +2,7 @@
 
 Name: ruya-repo
 Version: 0.1
-Release: 4%{?dist}
+Release: 5%{?dist}
 Summary: Ruya Software Repos
 Summary(ar): مستودعات رؤية البرمجية
 License: GPLv3
@@ -19,6 +19,7 @@ Ruya software official repos.
 
 %package -n ruya-dnf
 Summary: Ruya dnf customizations
+Requires: dnf
 
 %description -n ruya-dnf
 Ruya dnf customizations.
@@ -81,6 +82,9 @@ max_parallel_downloads=11" > /etc/dnf/dnf.conf
 /etc/dnf/vars/releasever
 
 %changelog
+* Sun Nov 6 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.1-5
+- requires dnf
+
 * Tue Nov 1 2022 Mosaab Alzoubi <mosaab[AT]parmg[DOT]sa> - 0.1-4
 - Fixes
 
